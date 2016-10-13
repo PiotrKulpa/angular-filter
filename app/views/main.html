@@ -10,13 +10,17 @@
 <div class="row marketing">
   <h4>Simple Angular filter method based on json file as database</h4>
   <p>Sorting by:</p>
-  <select class="form-control" ng-model="selectedCategory" ng-options="x for (x, y) in myCategory" ng-init="selectedCategory = myCategory['Id ascending']">
+  <select id="my-select" class="form-control" ng-model="selectedCategory" ng-options="x for (x, y) in myCategory" ng-init="selectedCategory = myCategory['Id ascending']">
   </select>
+  <p>Extra parameter:</p>
+  <select id="my-select" class="form-control" ng-model="selectedCategory2" ng-options="x for (x, y) in myCategory" ng-init="selectedCategory2 = myCategory['Id ascending']">
+  </select>
+
   <table class="table table-striped">
     <th>Id:</th>
     <th>Title:</th>
     <th>Add Time:</th>
-    <tr ng-repeat="x in names | orderBy:selectedCategory.dbValue">
+    <tr ng-repeat="x in names | orderBy:[selectedCategory.dbValue, selectedCategory2.dbValue]">
       <td>{{x.id}}</td>
       <td>{{x.title}}</td>
       <td>{{x.date}}</td>

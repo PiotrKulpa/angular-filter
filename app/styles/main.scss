@@ -1,6 +1,31 @@
 // bower:scss
 // endbower
 
+/*Colors*/
+/*Attention color*/
+$attention-red: #FF0000;
+
+/*Grey colors*/
+$smooth-grey: #D3D2D0;
+$dark-grey: #2C2C2C;
+
+/*Space*/
+/*Margins*/
+$bottom-space: 10px;
+
+/*Width & Height*/
+$select-width: 50%;
+
+#my-select{
+  margin-bottom : $bottom-space;
+  width: $select-width;
+}
+
+h4{
+  color: $attention-red;
+}
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -10,6 +35,7 @@
 
 body {
   padding: 0;
+  background-color: $smooth-grey;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -87,3 +113,5 @@ body {
     border-bottom: 0;
   }
 }
+
+
